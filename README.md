@@ -28,7 +28,7 @@ The method is returning the value of the first character so we need to add 1 to 
 
       for (int i = pos + 1; i < word.length(); i++)  
             
-Now the method is goingn to return the first multiple character that for comprenhensive is e.  
+Now the method is going to return the first multiple character that for comprenhensive is e.  
 
 #### Why the method _firstRepeatedCharacter_ is throwing an exception?   
 We need to add code so when there are no repeated characters the program knows what to do. In this case print [] so the Exception is not sent and returns 0.
