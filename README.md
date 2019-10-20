@@ -58,7 +58,11 @@ The boards can contain _Element_ objects, and since _Space_ and _Mine_ inherits 
 We have two boards of different size and place a different number of mines on each one. But in the second case it takes longer to place all the mines.
 
 #### Why placing less bombs takes longer in the second case?
+The blue board has less space than the red board. When the boards are set there are 1500000 million bombs placed on the read board and 1499999 in the blue one. The Red one has 500000 more spaces while the blue one has only one. As the bombs are being placed it is easier to find a free spot in the Red board as there are more free spcases. Because of this the Red board is filled faster with bombs than the blue board.
+
 #### Knowing that usually there are going to be more bombs than spaces in the final boards, how would you change the method _minningTheBoard_ to be more efficient?
+
+To make the code run faster it is a better idea to fill all the spaces and after that the program should add a specified number of spaces deleting the bombs. 
 
 **Strategy**: Understand well what the code does. Use conditionals breakpoints.
 
