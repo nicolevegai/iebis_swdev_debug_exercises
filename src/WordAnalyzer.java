@@ -89,20 +89,23 @@ public class WordAnalyzer{
         /** As the loop starts in int i=1 it does not check repeated characters in the first two chars
          * Therefore we have to change the condition to i=0 so it checks the first chars/
          */
+
         for (int i = 0; i < word.length() - 1; i++)
-        //Now, the program shows a thread Exception
-        {
+        /**
+         * Now, the program shows a thread Exception so we need to add an if
+         that tells the program what to do if the two first chars are not equal.
+         */
             if (word.charAt(i) == word.charAt(i + 1)) // found a repetition
             {
             if (i != 0) {
-                (word.charAt(i - 1) != word.charAt(i)) // it't the start
+               if (word.charAt(i - 1) != word.charAt(i)) // it't the start
                 c++;
                 } else
                     {
                     c++;
                     }
             }
-                }
+
             return c;
         }
 
