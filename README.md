@@ -72,14 +72,14 @@ Humans work in Base 10 and Floating point numbers work in Base 2. Many times it 
 #### How will you fix it?
 To solve This through research i found that Java has Math class called [BigDecimal](https://docs.oracle.com/javase/7/docs/api/java/math/BigDecimal.html) that for this cases when working with floats and to transform base 10 and binary numbers its more precise.
 
-      public static void main(String [] args) {
-                         BigDecimal d = new BigDecimal(0.0);
-                         BigDecimal max = new BigDecimal(1.0);
+        public static void main(String [] args) {
+              BigDecimal d = new BigDecimal(0.0);
+              BigDecimal m = new BigDecimal(1.0);
 
-                         while (d.equals(max)) {
-                             BigDecimal add = new BigDecimal(0.1);
-                             d = d.add(add);
-                         }
+              while (d.equals(m)) {
+                  BigDecimal sum = new BigDecimal(0.1);
+                  d = d.add(sum);
+              }
 
-                        System.out.println("d is 1");
-                    }
+              System.out.println("d is 1");
+          }
