@@ -23,9 +23,20 @@ In this code there is a class called WordAnalyzer that contains several methods 
 
 For some reason, the methods are not working properly, sometimes they return the correct value and others don't. You need to answer the next questions.
 
-#### Why the method _firstMultipleCharacter_ is returning "c" for the word _comprehensive_, when the correct answer should be "e"?
-#### Why the method _firstRepeatedCharacter_ is throwing an exception?
+#### Why the method _firstMultipleCharacter_ is returning "c" for the word _comprehensive_, when the correct answer should be "e"?   
+The method is returning the value of the first character so we need to add 1 to pos because if not the first letter or the char that is written in: if (find(ch, i) >= 0) firstMultipleCharacter() method is always going to be the value of pos.   
+      for (int i = pos + 1; i < word.length(); i++)  
+Now the method is goingn to return the first multiple character that for comprenhensive is e. 
+#### Why the method _firstRepeatedCharacter_ is throwing an exception?   
+We need to add this line of code so when there are no repeated characters the program knows what to do. In this case print [] so the Exception is not sent.
 #### Why the method _countGroupsRepeatedCharacters_ returns 3 in one case when it should be 4?
+As the loop starts in int i=1 it does not check repeated characters in the first two chars. Therefore we have to change the condition to i=0 so it checks the first char.  
+    for (int i = 0; i < word.length() - 1; i++)
+ Now, the program shows a thread Exception so we need to add an if that tells the program what to do if the two first chars are not equal.
+ if (i != 0) {
+               if (word.charAt(i - 1) != word.charAt(i)) // it't the start
+                c++;
+ 
 
 **Strategy**: Place breakpoints before the methods are executed, step into them and see what happens.
 
